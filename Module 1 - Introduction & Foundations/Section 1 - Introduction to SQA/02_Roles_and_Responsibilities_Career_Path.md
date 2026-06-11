@@ -1,15 +1,15 @@
 # Topic 2: Roles and Responsibilities in QA | Career Path
 
 ##  Table of Contents
-1. [Typical QA Roles](#typical-qa-roles)
-2. [Day-to-Day Tasks](#day-to-day-tasks)
-3. [Skills Required](#skills-required)
-4. [Career Path](#career-path)
-5. [Certifications](#certifications)
-6. [Tools Used in QA](#tools-in-qa)
-7. [QA Collaboration](#qa-collaboration)
-8. [Real-World Career Roadmap](#career-roadmap)
-9. [Freelancing & Job Market](#freelancing-job-market)
+1. [Typical QA Roles](#typical-qa-roles-in-teams)
+2. [Day-to-Day Tasks](#day-to-day-tasks-of-qa-professionals)
+3. [Skills Required](#skills-required-to-become-a-successful-qa-engineer)
+4. [Career Path](#career-path-from-junior-qa-to-qa-manager)
+5. [Certifications](#certifications-in-qa)
+6. [Tools Used in QA](#tools-commonly-used-in-qa)
+7. [QA and Product Manager Collaboration](#qa-and-product-manager-collaboration)
+8. [Real-World Career Roadmap in SQA](#real-world-career-roadmap-in-sqa)
+9. [Freelancing & Job Market](#freelancing-and-job-market)
 
 ---
 
@@ -734,7 +734,7 @@ QA: "Tested with same input, working now! "
 
 ---
 
-### QA & Product Manager Collaboration
+### QA and Product Manager Collaboration
 
 ```
 Typical Interaction:
@@ -810,7 +810,7 @@ Year 5: Test Lead / Senior QA Engineer
 └─ Goal: Leadership position
 ```
 
-## Freelancing and Job Market Insights
+## Freelancing and Job Market
 
 ### Freelancing in QA
 

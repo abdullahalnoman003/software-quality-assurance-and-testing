@@ -2,14 +2,14 @@
 
 ##  Table of Contents
 1. [What is SQA?](#what-is-sqa)
-2. [Why SQA is Important in SDLC](#why-sqa-is-important)
-3. [Difference Between QA, QC & Testing](#difference-qa-qc-testing)
+2. [Why SQA is Important in SDLC](#why-sqa-is-important-in-sdlc)
+3. [Difference Between QA, QC & Testing](#difference-between-qa-qc-and-testing)
 4. [Objectives of SQA](#objectives-of-sqa)
 5. [Software Quality Factors](#software-quality-factors)
-6. [Common Misconceptions About QA](#misconceptions)
-7. [Real-life Examples of Poor Quality](#poor-quality-examples)
-8. [Manual vs Automated QA](#manual-vs-automated)
-9. [SQA in Agile & Waterfall Models](#agile-waterfall)
+6. [Common Misconceptions About QA](#common-misconceptions-about-qa)
+7. [Real-life Examples of Poor Quality Software](#real-life-examples-of-poor-quality-software)
+8. [Manual vs Automated QA](#manual-vs-automated-qa)
+9. [SQA in Agile & Waterfall Models](#sqa-in-agile-and-waterfall-models)
 
 ---
 
@@ -84,7 +84,7 @@ Imagine building a house:
 
 ---
 
-## Difference Between QA, QC & Testing
+## Difference Between QA QC and Testing
 
 ### Quick Comparison Table
 
@@ -456,7 +456,7 @@ Bugs found early, fixed immediately
 
 ---
 
-## Overview of Manual vs Automated QA
+##  Manual vs Automated QA
 
 ### Quick Comparison
 
@@ -555,7 +555,7 @@ test('Login functionality', () => {
 
 ---
 
-## SQA in Agile & Waterfall Models
+## SQA in Agile and Waterfall Models
 
 ### Waterfall Model QA
 
