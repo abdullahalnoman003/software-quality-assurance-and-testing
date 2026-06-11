@@ -2,15 +2,15 @@
 
 ##  Table of Contents
 1. [What is SDLC?](#what-is-sdlc)
-2. [Importance of SDLC](#importance-of-sdlc)
+2. [Importance of SDLC](#importance-of-sdlc-in-software-projects)
 3. [Phases of SDLC](#phases-of-sdlc)
 4. [Flow of Each Phase](#flow-of-each-phase)
 5. [Real-Life Examples](#real-life-examples)
 6. [Waterfall Model](#waterfall-model)
-7. [Pros and Cons of Waterfall](#pros-cons)
-8. [When to Use Waterfall](#when-to-use)
+7. [Pros and Cons of Waterfall Model](#pros-and-cons-of-waterfall-model)
+8. [When to Use Waterfall](#when-to-use-waterfall-model)
 9. [QA in Waterfall](#qa-in-waterfall)
-10. [Limitations of Sequential Models](#limitations)
+10. [Limitations of Sequential Models](#limitations-of-sequential-models)
 
 ---
 
@@ -163,7 +163,7 @@ SDLC Phases:
    ↓ (Output: Updates and patches)
 ```
 
-### Detailed Phase Description
+### Flow of Each Phase
 
 #### Phase 1: Requirement Analysis
 **Goal**: Understand what software should do
@@ -505,7 +505,7 @@ Ongoing:
 
 ---
 
-## Flow of Each Phase with Real-Life Examples
+## Real-Life Examples
 
 ### Example 1: Building a Banking Mobile App
 
@@ -776,7 +776,7 @@ Month 12: Maintenance
 
 ---
 
-## Pros and Cons of Waterfall
+## Pros and Cons of Waterfall Model
 
 ###  Advantages of Waterfall
 

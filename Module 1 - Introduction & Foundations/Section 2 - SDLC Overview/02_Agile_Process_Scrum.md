@@ -2,15 +2,15 @@
 
 ##  Table of Contents
 1. [Why Agile?](#why-agile)
-2. [Agile Manifesto & Principles](#agile-manifesto)
+2. [Agile Manifesto & Principles](#agile-manifesto-and-principles)
 3. [Agile vs Waterfall](#agile-vs-waterfall)
-4. [Key Agile Methodologies](#agile-methodologies)
+4. [Key Agile Methodologies](#key-agile-methodologies)
 5. [Scrum Framework](#scrum-framework)
 6. [Scrum Roles](#scrum-roles)
 7. [Scrum Ceremonies](#scrum-ceremonies)
 8. [Sprint Lifecycle](#sprint-lifecycle)
-9. [QA's Role in Agile](#qa-in-agile)
-10. [Benefits for Fast-Changing Projects](#benefits)
+9. [QA's Role in Agile](#qas-role-in-agile)
+10. [Benefits for Fast-Changing Projects](#benefits-for-fast-changing-projects)
 
 ---
 
@@ -96,7 +96,7 @@ Result: If something fails, it's small, not massive
 
 ---
 
-## Agile Manifesto & Principles
+## Agile Manifesto and Principles
 
 ### The Agile Manifesto (2001)
 
@@ -701,7 +701,7 @@ Team:
 
 ---
 
-## Scrum Ceremonies (Meetings)
+## Scrum Ceremonies
 
 ### 1. Sprint Planning
 
@@ -973,7 +973,7 @@ Fri: Sprint Planning for next sprint
 
 ---
 
-## QA's Role in Agile/Scrum
+## QA's Role in Agile
 
 ### QA in Agile is Different
 
@@ -1094,7 +1094,7 @@ Result: Monitor quality trends
 
 ---
 
-## Benefits of Agile for Fast-Changing Projects
+## Benefits for Fast-Changing Projects
 
 ### 1. **Fast Time to Market**
 ```
