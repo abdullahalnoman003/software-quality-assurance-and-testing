@@ -33,6 +33,7 @@ Below is the directory tree of the repository. You can click on any folder or fi
     * [image.png](./Module%201%20-%20Introduction%20%26%20Foundations/Section%202%20-%20SDLC%20Overview/image.png) — Supporting SDLC diagrams.
   * **[Section 3 - STLC Essentials](./Module%201%20-%20Introduction%20%26%20Foundations/Section%203%20-%20STLC%20Essentials)**
     * [01_STLC_and_Test_Planning.md](./Module%201%20-%20Introduction%20%26%20Foundations/Section%203%20-%20STLC%20Essentials/01_STLC_and_Test_Planning.md) — STLC phases and Test Plan design.
+    * [02_Testing_Principles.md](./Module%201%20-%20Introduction%20%26%20Foundations/Section%203%20-%20STLC%20Essentials/02_Testing_Principles.md) — Testing Principles that are followd.
 * **[Module 2 - Manual Testing Essentials](./Module%202%20-%20Manual%20Testing%20Essentials)**
   * **[Section 4 - Fundamentals of Manual Testing](./Module%202%20-%20Manual%20Testing%20Essentials/Section%204%20-%20Fundamentals%20of%20Manual%20Testing)**
     * [01_Test_Execution_Defect_Lifecycle.md](./Module%202%20-%20Manual%20Testing%20Essentials/Section%204%20-%20Fundamentals%20of%20Manual%20Testing/01_Test_Execution_Defect_Lifecycle.md) — Execution flow and the complete defect lifecycle.
