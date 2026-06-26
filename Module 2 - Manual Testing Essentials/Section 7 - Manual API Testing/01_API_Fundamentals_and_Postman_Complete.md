@@ -32,10 +32,10 @@
 
 #### Definition & Core Concept
 
-**API (Application Programming Interface):** A formal contract — a defined set of rules and protocols — that allows two separate software applications to communicate and exchange data with each other reliably.
+**API (Application Programming Interface):** A formal contract - a defined set of rules and protocols - that allows two separate software applications to communicate and exchange data with each other reliably.
 
 > [!NOTE]
-> Think of an API as a **standardized communication channel**. Just like a socket defines how two plugs connect, an API defines exactly how two systems can talk — what requests are valid, what format data must be in, and what responses to expect.
+> Think of an API as a **standardized communication channel**. Just like a socket defines how two plugs connect, an API defines exactly how two systems can talk - what requests are valid, what format data must be in, and what responses to expect.
 
 #### Real-World Analogy: The Restaurant Model
 
@@ -49,7 +49,7 @@ The restaurant analogy is the most intuitive way to understand the client-server
   │   CUSTOMER (Client App)                                             │
   │       │                                                             │
   │       │  "I'd like the grilled salmon, please."                     │
-  │       │  (API Request — structured, standard format)                │
+  │       │  (API Request - structured, standard format)                │
   │       ▼                                                             │
   │   WAITER (API Layer / Endpoint)                                     │
   │       │                                                             │
@@ -64,7 +64,7 @@ The restaurant analogy is the most intuitive way to understand the client-server
   │   WAITER (API Layer)                                                │
   │       │                                                             │
   │       │  Delivers the finished plate to the customer                │
-  │       │  (API Response — structured, standard format)               │
+  │       │  (API Response - structured, standard format)               │
   │       ▼                                                             │
   │   CUSTOMER (Client App)                                             │
   │       Receives exactly what was ordered                             │
@@ -74,10 +74,10 @@ The restaurant analogy is the most intuitive way to understand the client-server
 
 #### Why APIs Are the Backbone of Modern Software
 
-A single production application is not a monolith — it is an ecosystem of interconnected APIs working in concert.
+A single production application is not a monolith - it is an ecosystem of interconnected APIs working in concert.
 
 ```text
-  E-Commerce Platform — API Dependency Map
+  E-Commerce Platform - API Dependency Map
 
   ┌───────────────┐     ┌───────────────┐     ┌───────────────┐
   │  User API     │     │  Product API  │     │  Cart API     │
@@ -125,19 +125,19 @@ A single production application is not a monolith — it is an ecosystem of inte
   │             API REQUEST / RESPONSE LIFECYCLE                     │
   └──────────────────────────────────────────────────────────────────┘
 
-  PHASE 1 — CLIENT PREPARES REQUEST
+  PHASE 1 - CLIENT PREPARES REQUEST
   ├─ Identify the target endpoint URL
   ├─ Select the appropriate HTTP method (GET, POST, etc.)
   ├─ Attach authentication credentials (token/API key)
   ├─ Set required headers (Content-Type, Accept)
   └─ Construct the request body (if applicable)
 
-  PHASE 2 — REQUEST TRAVELS OVER NETWORK
+  PHASE 2 - REQUEST TRAVELS OVER NETWORK
   ├─ HTTP packet is serialized and transmitted
   ├─ DNS resolution maps domain to server IP
   └─ Request arrives at the API server (avg. 50–300ms)
 
-  PHASE 3 — SERVER PROCESSES REQUEST
+  PHASE 3 - SERVER PROCESSES REQUEST
   ├─ Parse and deserialize the request payload
   ├─ Authenticate the client (validate token/key)
   ├─ Authorize the action (check permissions)
@@ -145,12 +145,12 @@ A single production application is not a monolith — it is an ecosystem of inte
   ├─ Query the database (if needed)
   └─ Construct the HTTP response
 
-  PHASE 4 — SERVER SENDS RESPONSE
+  PHASE 4 - SERVER SENDS RESPONSE
   ├─ Attach HTTP status code (200, 201, 404, etc.)
   ├─ Add response headers (Content-Type, Cache-Control)
   └─ Serialize and send the response body (usually JSON)
 
-  PHASE 5 — CLIENT RECEIVES & PROCESSES RESPONSE
+  PHASE 5 - CLIENT RECEIVES & PROCESSES RESPONSE
   ├─ Parse the HTTP status code
   ├─ Deserialize the JSON response body
   ├─ Validate the data structure and values
@@ -175,7 +175,7 @@ A single production application is not a monolith — it is an ecosystem of inte
 
 **Scenario:** A mobile app fetches a user profile for display.
 
-**Step 1 — Client Request:**
+**Step 1 - Client Request:**
 ```http
 GET /api/v1/users/123 HTTP/1.1
 Host: api.example.com
@@ -183,21 +183,21 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 Accept: application/json
 ```
 
-**Step 2 — Server Processing:**
+**Step 2 - Server Processing:**
 ```sql
 -- Server authenticates token, then executes:
 SELECT id, name, email, created_at FROM users WHERE id = 123;
 ```
 
-**Step 3 — Server Response:**
+**Step 3 - Server Response:**
 ```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
   "id": 123,
-  "name": "John Doe",
-  "email": "john@example.com",
+  "name": "noman Abdullah",
+  "email": "noman@example.com",
   "created_at": "2025-03-15T08:00:00Z"
 }
 ```
@@ -214,15 +214,15 @@ Content-Type: application/json
 
 #### The Five Core HTTP Methods
 
-##### 1. GET — Retrieve Data
+##### 1. GET - Retrieve Data
 
 **Purpose:** Read and retrieve an existing resource. Does not modify any server-side data.
 
 | Property | Value |
 | :--- | :--- |
-| **Safe** |  Yes — does not alter server state |
-| **Idempotent** |  Yes — calling it 100 times yields the same result |
-| **Has Request Body** |  No — data is passed via URL/query parameters |
+| **Safe** |  Yes - does not alter server state |
+| **Idempotent** |  Yes - calling it 100 times yields the same result |
+| **Has Request Body** |  No - data is passed via URL/query parameters |
 | **Cached by Browser** |  Yes |
 
 ```http
@@ -233,14 +233,14 @@ Authorization: Bearer token_here
 
 **Common Use Cases:** Fetch user profile, retrieve product catalog, get order status, search results.
 
-##### 2. POST — Create a New Resource
+##### 2. POST - Create a New Resource
 
 **Purpose:** Submit data to the server to create a new resource. Calling POST twice typically creates two separate records.
 
 | Property | Value |
 | :--- | :--- |
-| **Safe** |  No — modifies server state |
-| **Idempotent** |  No — repeated calls create duplicate resources |
+| **Safe** |  No - modifies server state |
+| **Idempotent** |  No - repeated calls create duplicate resources |
 | **Has Request Body** |  Yes |
 | **Cached by Browser** |  No |
 
@@ -249,22 +249,22 @@ POST /api/users HTTP/1.1
 Content-Type: application/json
 
 {
-  "name": "Jane Smith",
-  "email": "jane@example.com",
+  "name": "kamal uddin",
+  "email": "kamal@example.com",
   "password": "SecurePass#2026"
 }
 ```
 
 **Common Use Cases:** Create user account, submit order, upload file, submit a form.
 
-##### 3. PUT — Replace an Entire Resource
+##### 3. PUT - Replace an Entire Resource
 
 **Purpose:** Send a complete replacement for an existing resource. All fields must be provided; missing fields are typically set to null or default values.
 
 | Property | Value |
 | :--- | :--- |
 | **Safe** |  No |
-| **Idempotent** |  Yes — sending same payload repeatedly = same state |
+| **Idempotent** |  Yes - sending same payload repeatedly = same state |
 | **Has Request Body** |  Yes (full object required) |
 
 ```http
@@ -272,15 +272,15 @@ PUT /api/users/123 HTTP/1.1
 Content-Type: application/json
 
 {
-  "name": "John Updated",
-  "email": "john.new@example.com",
+  "name": "noman Updated",
+  "email": "noman.new@example.com",
   "age": 31
 }
 ```
 
 **QA Note:** If you omit a field (e.g., `age`) in a PUT request, that field may be cleared on the server. Always send the full object.
 
-##### 4. PATCH — Partial Update
+##### 4. PATCH - Partial Update
 
 **Purpose:** Send only the fields that need to change. The server merges the patch into the existing resource without affecting other fields.
 
@@ -295,7 +295,7 @@ PATCH /api/users/123 HTTP/1.1
 Content-Type: application/json
 
 {
-  "email": "john.newemail@example.com"
+  "email": "noman.newemail@example.com"
 }
 ```
 
@@ -307,14 +307,14 @@ Content-Type: application/json
 | Risk of data loss |  High (omitted fields may be nulled) |  Low |
 | Bandwidth efficiency |  Lower |  Higher |
 
-##### 5. DELETE — Remove a Resource
+##### 5. DELETE - Remove a Resource
 
 **Purpose:** Permanently delete a specified resource from the server.
 
 | Property | Value |
 | :--- | :--- |
 | **Safe** |  No |
-| **Idempotent** |  Yes — deleting an already-deleted resource returns 404, not an error |
+| **Idempotent** |  Yes - deleting an already-deleted resource returns 404, not an error |
 | **Has Request Body** |  Usually none |
 
 ```http
@@ -330,7 +330,7 @@ Authorization: Bearer token_here
 
 Status codes are the server's standardized way of communicating the outcome of every request. As a QA engineer, reading status codes is a fundamental skill.
 
-#### 2xx — Success
+#### 2xx - Success
 
 | Code | Name | Meaning | Typically Used With |
 | :---: | :--- | :--- | :--- |
@@ -338,14 +338,14 @@ Status codes are the server's standardized way of communicating the outcome of e
 | `201` | Created | Resource was successfully created. | POST |
 | `204` | No Content | Request succeeded; no response body returned. | DELETE |
 
-#### 3xx — Redirection
+#### 3xx - Redirection
 
 | Code | Name | Meaning |
 | :---: | :--- | :--- |
 | `301` | Moved Permanently | Resource has a new permanent URL. Update your bookmarks/configs. |
 | `304` | Not Modified | Cached version is still valid; no need to re-download. |
 
-#### 4xx — Client Errors *(Your fault as the caller)*
+#### 4xx - Client Errors *(Your fault as the caller)*
 
 | Code | Name | Meaning | Common Cause |
 | :---: | :--- | :--- | :--- |
@@ -357,7 +357,7 @@ Status codes are the server's standardized way of communicating the outcome of e
 | `422` | Unprocessable Entity | Request format is valid, but data fails business validation. | Invalid email format, age below minimum |
 | `429` | Too Many Requests | Rate limit has been exceeded. | Sending too many requests per second |
 
-#### 5xx — Server Errors *(Server's fault)*
+#### 5xx - Server Errors *(Server's fault)*
 
 | Code | Name | Meaning | Common Cause |
 | :---: | :--- | :--- | :--- |
@@ -392,12 +392,12 @@ Every API request is composed of four distinct structural layers:
 │  Content-Type: application/json                       │
 │  Accept: application/json                             │
 ├───────────────────────────────────────────────────────┤
-│  [Empty Line — separates headers from body]           │
+│  [Empty Line - separates headers from body]           │
 ├───────────────────────────────────────────────────────┤
-│  BODY (optional — used with POST, PUT, PATCH)         │
+│  BODY (optional - used with POST, PUT, PATCH)         │
 │  {                                                    │
-│    "name": "John Doe",                                │
-│    "email": "john@example.com",                       │
+│    "name": "noman Abdullah",                          │
+│    "email": "noman@example.com",                      |
 │    "age": 30                                          │
 │  }                                                    │
 └───────────────────────────────────────────────────────┘
@@ -449,10 +449,10 @@ Headers transmit metadata about the request. They are key-value pairs that provi
 The body carries the payload data for write operations. It is not used with GET or DELETE requests.
 
 ```json
-// JSON Body — Standard for REST APIs (most common)
+// JSON Body - Standard for REST APIs (most common)
 {
-  "name": "Jane Smith",
-  "email": "jane@example.com",
+  "name": "kamal uddin",
+  "email": "kamal@example.com",
   "age": 28,
   "address": {
     "street": "123 Main St",
@@ -488,8 +488,8 @@ The body carries the payload data for write operations. It is not used with GET 
 │  RESPONSE BODY                                        │
 │  {                                                    │
 │    "id": 456,                                         │
-│    "name": "Jane Smith",                              │
-│    "email": "jane@example.com",                       │
+│    "name": "kamal uddin",                             │
+│    "email": "kamal@example.com",                      │
 │    "created_at": "2026-06-21T10:30:00Z"               │
 │  }                                                    │
 └───────────────────────────────────────────────────────┘
@@ -501,8 +501,8 @@ The body carries the payload data for write operations. It is not used with GET 
 ```json
 {
   "id": 123,
-  "name": "John Doe",
-  "email": "john@example.com",
+  "name": "noman Abdullah",
+  "email": "noman@example.com",
   "active": true
 }
 ```
@@ -511,8 +511,8 @@ The body carries the payload data for write operations. It is not used with GET 
 ```json
 {
   "data": [
-    { "id": 1, "name": "John Doe" },
-    { "id": 2, "name": "Jane Smith" }
+    { "id": 1, "name": "noman Abdullah" },
+    { "id": 2, "name": "kamal uddin" }
   ],
   "pagination": {
     "page": 1,
@@ -558,7 +558,7 @@ The body carries the payload data for write operations. It is not used with GET 
 
 | Type | Syntax | Example | Notes |
 | :--- | :--- | :--- | :--- |
-| **String** | `"value"` | `"John Doe"` | Always double-quoted |
+| **String** | `"value"` | `"noman Abdullah"` | Always double-quoted |
 | **Number** | `42` / `3.14` | `30`, `99.99` | No quotes; supports integers and decimals |
 | **Boolean** | `true` / `false` | `true` | Lowercase only |
 | **Null** | `null` | `null` | Represents absence of a value; lowercase |
@@ -592,14 +592,14 @@ The body carries the payload data for write operations. It is not used with GET 
 ```text
  VALID JSON (parses correctly)
 {
-  "name": "John",
+  "name": "noman",
   "age": 30,
   "active": true
 }
 
- INVALID JSON — Common Mistakes
+ INVALID JSON - Common Mistakes
 {
-  name: "John",          ← Keys must be in double quotes
+  name: "noman",          ← Keys must be in double quotes
   'age': 30,             ← Single quotes are not allowed
   "active": true,        ← Trailing comma after last item is illegal
 }
@@ -609,11 +609,11 @@ The body carries the payload data for write operations. It is not used with GET 
 
 | # | Error | Incorrect | Correct |
 | :---: | :--- | :--- | :--- |
-| 1 | Unquoted key | `{name: "John"}` | `{"name": "John"}` |
-| 2 | Single-quoted key/value | `{'name': 'John'}` | `{"name": "John"}` |
-| 3 | Trailing comma | `{"name": "John",}` | `{"name": "John"}` |
+| 1 | Unquoted key | `{name: "noman"}` | `{"name": "noman"}` |
+| 2 | Single-quoted key/value | `{'name': 'noman'}` | `{"name": "noman"}` |
+| 3 | Trailing comma | `{"name": "noman",}` | `{"name": "noman"}` |
 | 4 | Unquoted string value | `{"status": active}` | `{"status": "active"}` |
-| 5 | Mismatched braces | `{"name": "John"` | `{"name": "John"}` |
+| 5 | Mismatched braces | `{"name": "noman"` | `{"name": "noman"}` |
 
 > [!TIP]
 > Use [jsonlint.com](https://jsonlint.com) or Postman's built-in JSON formatter to instantly validate any JSON payload before sending a request.
@@ -640,7 +640,7 @@ Every API call typically maps to one or more database operations behind the scen
 
 **Scenario:** A QA engineer validates that a new order is correctly persisted after an API call.
 
-**Step 1 — Send the API Request:**
+**Step 1 - Send the API Request:**
 ```http
 POST /api/orders HTTP/1.1
 Content-Type: application/json
@@ -652,7 +652,7 @@ Content-Type: application/json
 }
 ```
 
-**Step 2 — Verify the API Response:**
+**Step 2 - Verify the API Response:**
 ```json
 // Expected: HTTP 201 Created
 {
@@ -664,7 +664,7 @@ Content-Type: application/json
 }
 ```
 
-**Step 3 — Validate Directly Against the Database:**
+**Step 3 - Validate Directly Against the Database:**
 ```sql
 SELECT * FROM orders WHERE id = 5001;
 ```
@@ -673,7 +673,7 @@ SELECT * FROM orders WHERE id = 5001;
 | :---: | :---: | :---: | :--- | :--- |
 | 5001 | 123 | 199.98 | pending | 2026-06-21 10:30:00 |
 
-**Step 4 — QA Verification Checklist:**
+**Step 4 - QA Verification Checklist:**
 -  Order record exists in the database
 -  All field values match the API request body exactly
 -  `status` is `pending` (correct initial state)
@@ -692,8 +692,8 @@ A QA engineer who understands the underlying database schema can write far more 
   │ UserID  │ Name       │  │ ProdID  │ Name         │  │ OrderID │ UserID  │ ProdID   │ Quantity │
   │ (PK)    │            │  │ (PK)    │              │  │ (PK)    │ (FK)    │ (FK)     │          │
   ├─────────┼────────────┤  ├─────────┼──────────────┤  ├─────────┼─────────┼──────────┼──────────┤
-  │ 1       │ John       │  │ 100     │ Laptop       │  │ 5001    │ 1       │ 100      │ 1        │
-  │ 2       │ Jane       │  │ 101     │ Mouse        │  │ 5002    │ 2       │ 101      │ 2        │
+  │ 1       │ noman      │  │ 100     │ Laptop       │  │ 5001    │ 1       │ 100      │ 1        │
+  │ 2       │ kamal      │  │ 101     │ Mouse        │  │ 5002    │ 2       │ 101      │ 2        │
   │ 3       │ Bob        │  │ 102     │ Monitor      │  │ 5003    │ 3       │ 102      │ 1        │
   └─────────┴────────────┘  └─────────┴──────────────┘  └─────────┴─────────┴──────────┴──────────┘
             │                          │                            │         │
@@ -721,7 +721,7 @@ A QA engineer who understands the underlying database schema can write far more 
 | **Download** | [postman.com/downloads](https://www.postman.com/downloads/) |
 | **License Model** | Free tier (fully sufficient for QA) → Paid (teams/enterprise) |
 | **Supported Platforms** | Windows, macOS, Linux |
-| **Learning Curve** | Low — approachable within a single working session |
+| **Learning Curve** | Low - approachable within a single working session |
 
 #### Why Postman is the Industry Standard for Manual API QA
 
@@ -750,7 +750,7 @@ A QA engineer who understands the underlying database schema can write far more 
   │  │  E-Comm   │  │  │  BODY EDITOR           │  │  RESPONSE VIEWER   │    │
   │  │   GET     │  │  │  ● raw  ● JSON ▼       │  │  Status: 201 OK    │    │
   │  │   POST    │  │  │  {                     │  │  Time: 187ms       │    │
-  │  │   PATCH   │  │  │    "name": "Jane",     │  │  Size: 1.2 KB      │    │
+  │  │   PATCH   │  │  │    "name": "kamal",    │  │  Size: 1.2 KB      │    │
   │  │   DELETE  │  │  │    "email": "..."      │  │  ───────────────── │    │
   │  └───────────┘  │  │  }                     │  │  Pretty  Raw       │    │
   │                 │  └────────────────────────┘  └────────────────────┘    │
@@ -768,12 +768,12 @@ A QA engineer who understands the underlying database schema can write far more 
 ```
 
 1. Navigate to [postman.com/downloads](https://www.postman.com/downloads/) and download the installer for your OS.
-2. Run the installer — no special configuration required.
+2. Run the installer - no special configuration required.
 3. Open Postman. Creating an account is optional but enables cloud sync of your collections.
 
 #### Organizing Your Work: Collection Structure
 
-**Collections** are the primary organizational unit in Postman — think of them as project folders that group all related API requests.
+**Collections** are the primary organizational unit in Postman - think of them as project folders that group all related API requests.
 
 **Recommended Collection Architecture for a QA Project:**
 
@@ -803,7 +803,7 @@ A QA engineer who understands the underlying database schema can write far more 
 
 ### Testing HTTP Methods in Postman
 
-#### GET — Retrieve a Resource
+#### GET - Retrieve a Resource
 
 **Postman Setup:**
 
@@ -819,8 +819,8 @@ A QA engineer who understands the underlying database schema can write far more 
 // HTTP/1.1 200 OK
 {
   "id": 123,
-  "name": "John Doe",
-  "email": "john@example.com",
+  "name": "noman Abdullah",
+  "email": "noman@example.com",
   "age": 30
 }
 ```
@@ -834,7 +834,7 @@ A QA engineer who understands the underlying database schema can write far more 
 
 ---
 
-#### POST — Create a New Resource
+#### POST - Create a New Resource
 
 **Postman Setup:**
 
@@ -843,15 +843,15 @@ A QA engineer who understands the underlying database schema can write far more 
 | Method | `POST` |
 | URL | `{{baseUrl}}/api/users` |
 | Header | `Content-Type: application/json` |
-| Body (raw JSON) | `{ "name": "Jane Smith", "email": "jane@example.com", "password": "Secure#2026" }` |
+| Body (raw JSON) | `{ "name": "kamal uddin", "email": "kamal@example.com", "password": "Secure#2026" }` |
 
 **Expected Response:**
 ```json
 // HTTP/1.1 201 Created
 {
   "id": 456,
-  "name": "Jane Smith",
-  "email": "jane@example.com",
+  "name": "kamal uddin",
+  "email": "kamal@example.com",
   "created_at": "2026-06-21T10:30:00Z"
 }
 ```
@@ -865,7 +865,7 @@ A QA engineer who understands the underlying database schema can write far more 
 
 ---
 
-#### PUT — Replace an Entire Resource
+#### PUT - Replace an Entire Resource
 
 **Postman Setup:**
 
@@ -873,15 +873,15 @@ A QA engineer who understands the underlying database schema can write far more 
 | :--- | :--- |
 | Method | `PUT` |
 | URL | `{{baseUrl}}/api/users/123` |
-| Body (raw JSON) | `{ "name": "John Updated", "email": "john.new@example.com", "age": 31 }` |
+| Body (raw JSON) | `{ "name": "noman Updated", "email": "noman.new@example.com", "age": 31 }` |
 
 **Expected Response:**
 ```json
 // HTTP/1.1 200 OK
 {
   "id": 123,
-  "name": "John Updated",
-  "email": "john.new@example.com",
+  "name": "noman Updated",
+  "email": "noman.new@example.com",
   "age": 31
 }
 ```
@@ -894,7 +894,7 @@ A QA engineer who understands the underlying database schema can write far more 
 
 ---
 
-#### PATCH — Partially Update a Resource
+#### PATCH - Partially Update a Resource
 
 **Postman Setup:**
 
@@ -902,15 +902,15 @@ A QA engineer who understands the underlying database schema can write far more 
 | :--- | :--- |
 | Method | `PATCH` |
 | URL | `{{baseUrl}}/api/users/123` |
-| Body (raw JSON) | `{ "email": "john.newemail@example.com" }` |
+| Body (raw JSON) | `{ "email": "noman.newemail@example.com" }` |
 
 **Expected Response:**
 ```json
 // HTTP/1.1 200 OK
 {
   "id": 123,
-  "name": "John Updated",             ← Unchanged from previous state
-  "email": "john.newemail@example.com", ← Only this field was modified
+  "name": "noman Updated",             ← Unchanged from previous state
+  "email": "noman.newemail@example.com", ← Only this field was modified
   "age": 31                           ← Unchanged from previous state
 }
 ```
@@ -923,7 +923,7 @@ A QA engineer who understands the underlying database schema can write far more 
 
 ---
 
-#### DELETE — Remove a Resource
+#### DELETE - Remove a Resource
 
 **Postman Setup:**
 
@@ -936,12 +936,12 @@ A QA engineer who understands the underlying database schema can write far more 
 **Expected Response:**
 ```text
 HTTP/1.1 204 No Content
-(Empty body — this is correct and expected)
+(Empty body - this is correct and expected)
 ```
 
 **QA Verification Checklist:**
 -  Status code is `204 No Content` (or `200 OK` with a confirmation message)
--  A subsequent `GET /api/users/123` returns `404 Not Found` — confirming deletion
+-  A subsequent `GET /api/users/123` returns `404 Not Found` - confirming deletion
 -  The record no longer exists in the database (direct DB query if access is available)
 
 ---
@@ -954,7 +954,7 @@ Query parameters are key-value pairs appended to the URL after a `?` symbol. The
 
 **Syntax:** `?key1=value1&key2=value2`
 
-**In Postman — Adding Parameters via the Params Tab:**
+**In Postman - Adding Parameters via the Params Tab:**
 
 | Key | Value | Purpose |
 | :--- | :--- | :--- |
@@ -997,7 +997,7 @@ https://api.example.com/api/users?page=1&limit=10&role=admin&sortBy=created_at
 
 #### The Problem Variables Solve
 
-Without variables, every request contains hardcoded values. When the environment changes (e.g., moving from Development to Staging), every request must be updated manually — a slow, error-prone process.
+Without variables, every request contains hardcoded values. When the environment changes (e.g., moving from Development to Staging), every request must be updated manually - a slow, error-prone process.
 
 #### Variable Scope Hierarchy
 
@@ -1047,7 +1047,7 @@ Without variables, every request contains hardcoded values. When the environment
   // → Resolves to: GET https://dev-api.example.com/api/users/1
   // → Authorization: Bearer dev_token_abc123
 
-  // Switch to "Staging" — no request changes needed!
+  // Switch to "Staging" - no request changes needed!
   // → Resolves to: GET https://staging-api.example.com/api/users/1
   // → Authorization: Bearer staging_token_def456
 ```
@@ -1071,11 +1071,11 @@ pm.test("Save newly created user ID for subsequent requests", function () {
 
 #### Why Automated Test Scripts Are Essential
 
-Without test scripts, verification is entirely manual — you must visually inspect every response for every field, every time. Test scripts transform this into an automated, repeatable, and auditable process.
+Without test scripts, verification is entirely manual - you must visually inspect every response for every field, every time. Test scripts transform this into an automated, repeatable, and auditable process.
 
 | Aspect | Manual Verification | Automated Test Scripts |
 | :--- | :--- | :--- |
-| Speed | Slow — inspect each field visually | Instant — milliseconds per assertion |
+| Speed | Slow - inspect each field visually | Instant - milliseconds per assertion |
 | Consistency | Prone to human oversight | 100% consistent on every run |
 | Documentation | Undocumented | Scripts act as living documentation |
 | CI/CD Integration | Not possible | Runs automatically in pipelines |
@@ -1085,35 +1085,35 @@ Without test scripts, verification is entirely manual — you must visually insp
 
 All Postman tests are written in JavaScript using the `pm` (Postman) object inside the **Tests** tab.
 
-**Pattern 1 — Assert Status Code:**
+**Pattern 1 - Assert Status Code:**
 ```javascript
 pm.test("Status code is 200 OK", function () {
     pm.response.to.have.status(200);
 });
 ```
 
-**Pattern 2 — Assert Response Time (Performance Baseline):**
+**Pattern 2 - Assert Response Time (Performance Baseline):**
 ```javascript
 pm.test("Response time is under 1000ms", function () {
     pm.expect(pm.response.responseTime).to.be.below(1000);
 });
 ```
 
-**Pattern 3 — Assert Field Existence:**
+**Pattern 3 - Assert Field Existence:**
 ```javascript
 pm.test("Response body contains 'id' field", function () {
     pm.expect(pm.response.json().id).to.exist;
 });
 ```
 
-**Pattern 4 — Assert Exact Field Value:**
+**Pattern 4 - Assert Exact Field Value:**
 ```javascript
 pm.test("User name matches expected value", function () {
-    pm.expect(pm.response.json().name).to.equal("John Doe");
+    pm.expect(pm.response.json().name).to.equal("noman Abdullah");
 });
 ```
 
-**Pattern 5 — Assert Content-Type Header:**
+**Pattern 5 - Assert Content-Type Header:**
 ```javascript
 pm.test("Response Content-Type is application/json", function () {
     pm.expect(pm.response.headers.get("Content-Type")).to.include("application/json");
@@ -1155,11 +1155,11 @@ pm.test("Response body contains required fields", function () {
 // Test 5: Data integrity validation
 pm.test("Returned user data matches submitted payload", function () {
     var jsonData = pm.response.json();
-    pm.expect(jsonData.name).to.equal("Jane Smith");
-    pm.expect(jsonData.email).to.equal("jane@example.com");
+    pm.expect(jsonData.name).to.equal("kamal uddin");
+    pm.expect(jsonData.email).to.equal("kamal@example.com");
 });
 
-// Test 6: Security — password must never be returned
+// Test 6: Security - password must never be returned
 pm.test("Password field is NOT exposed in response (security)", function () {
     pm.expect(pm.response.json().password).to.be.undefined;
 });
@@ -1207,7 +1207,7 @@ This scenario validates the entire lifecycle of a user resource using a chained 
 
 #### Scenario 2: Comprehensive Error & Edge Case Testing
 
-Robust API testing is not just about the happy path — negative testing is equally critical.
+Robust API testing is not just about the happy path - negative testing is equally critical.
 
 | Test Category | Test Input | Endpoint | Expected Status | Validation |
 | :--- | :--- | :--- | :---: | :--- |
@@ -1242,7 +1242,7 @@ A targeted test matrix ensuring all authentication states are handled correctly 
 * **Postman** is the industry-standard tool for manual API testing. Its collection system, environment variables, and automated test scripts dramatically accelerate QA workflows.
 * **Environment Variables** decouple your test configuration from your test logic, making it trivial to run the same suite against Development, Staging, and Production environments with a single click.
 * **Test Scripts** elevate manual API testing to a semi-automated discipline. Writing assertions that run on every send ensures consistent, repeatable, and auditable verification.
-* **Negative Testing** — validating error handling, authentication, authorization, and input validation — is as important as testing the happy path and must always be included in a comprehensive test suite.
+* **Negative Testing** - validating error handling, authentication, authorization, and input validation - is as important as testing the happy path and must always be included in a comprehensive test suite.
 
 ---
 
